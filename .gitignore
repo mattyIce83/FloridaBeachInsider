@@ -1,0 +1,7 @@
+#Files
+.gitignore
+.env
+
+#Directories
+fbi/__pycache__/
+fbi/settings/__pycache__/
