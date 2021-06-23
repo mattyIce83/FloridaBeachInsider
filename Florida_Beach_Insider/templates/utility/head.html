@@ -1,0 +1,152 @@
+{% load staticfiles %}
+<head>
+  <!-- All of the code below is to be extracted into its own file -->
+  <meta charset="utf-8">
+  <meta name="robots" content="index, follow"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Google Search Console Tag -->
+  <meta name="google-site-verification" content="Vg1aBzskGoTagVYqhCgKwnbwe3e44fk1-Ff5rR7p2u0" />
+  <!-- To be converted into an SEO block later -->
+  <title>{% block title %}{{ flatpage.title }}| Florida Beach Insider{% endblock %}</title>
+  <meta name="author" content="Times Publishing Company">
+  {% if flatpage.url == "/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Choose the best beach, plan the best vacation, find the best hotels, restaurants, bars and things to do, then book your trip at the best price with our travel tips." meta_img="img.png" %}
+  {% elif flatpage.url == "/whats-new/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="[XXXXX]" meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Use our map to choose the best place for your Florida beach vacation by city, coast or feature." meta_img="img.png" %}
+  {% elif flatpage.url == "/beach-reads/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Read articles about the people, places and events from across Florida's best beach communities." %}
+  {% elif flatpage.url == "/what-visitors-should-know/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="The best time to visit, what to pack and what to watch out for on your Florida beach vacation." meta_img="img.png" %}
+  {% elif flatpage.url == "/about-florida-beach-insider/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Florida Beach Insider is your one-stop beach vacation guide to the best hotels, restaurants, bars, deals, events, travel tips and more." meta_img="img.png" %}
+  {% elif flatpage.url == "/subscribe-to-our-newsletter/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Subscribe to Florida Beach Insider’s email newsletter for the latest travel guides, articles, vacation tips, updates, deals and recommendations." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/honeymoon-island-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Perennial favorite Honeymoon Island State Park is a great place to see a sunset, walk your dog or see wildlife — and there is plenty of parking, too." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/caladesi-island-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="A top-rated beach and plenty of natural wonders are the highlight of this popular park, which can be reached by boat, but not by car." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/clearwater-beach-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="What's New Meta Description goes here" meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/redington-shores-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="A compact beach town that offers just enough restaurants, shops and sand to satisfy those looking for an out-of-the way Florida vacation." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/north-redington-beach-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="The middle child of the Redington beaches, North Redington Beach is relaxed and low-key but still offers a small town’s amenities." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/redington-beach-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="What's New Meta Description goes here" meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/treasure-island-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="A retro vibe welcomes all kinds of families and partygoers on this exceptionally wide beach expanse, where alcohol is allowed most places on the sand." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/st-pete-beach-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Close to St. Petersburg and featuring stellar sand, St. Pete Beach offers both bustling and secluded sections to cater to all sorts of beachcombers." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/pass-a-grille-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="This neighborhood maintains a historic feel and small-town identity, just down the road from all the hustle and bustle of St. Pete Beach." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/gulfport-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="The Old Florida vibe of the restaurants and shops in this community hidden away on Tampa Bay makes it worth a day trip from nearby beach towns." meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/fort-de-soto-park-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="What's New Meta Description goes here" meta_img="img.png" %}
+  {% elif flatpage.url == "/beaches/egmont-key-state-park-travel-guide/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="A fairly remote island full of history and wildlife stands guard at the entrance to Tampa Bay. Just be sure to bring drinking water and cash." meta_img="img.png" %}
+  {% elif flatpage.url == "/beach-reads/sun-sand-sustainability-anna-maria-island-excels-at-ecotourism/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Reach out and grab a leaf. Go on. Now pop it in your mouth. It's the moringa plant, ounce for ounce one of the most nutritious plants on earth, which tastes like a cross between a bean and a pea." meta_img="img.png" meta_canonical="http://www.tampabay.com/features/travel/anna-maria-island-excels-at-ecotourism/2210585" %}
+  {% elif flatpage.url == "/beach-reads/an-insiders-guide-to-beach-camping-on-shell-key/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Working several part-time jobs after graduating college seems to be increasingly common. With the fluctuating schedules and multiple tax forms also comes the benefit of having random days off during the week to experience wild areas in Florida when no one is around." meta_img="img.png" meta_canonical="http://www.tampabay.com/sports/outdoors/choose-your-own-backyard-adventure-camping-on-shell-key/2318932" %}
+  {% elif flatpage.url == "/beach-reads/five-saltwater-fishing-tips-from-a-professional/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="George Poveromo, the host of George Poveromo's World of Saltwater Fishing on NBC Sports Network, offered five tips that will help anglers anywhere they travel in search of big fish." meta_img="img.png" meta_canonical="http://www.tampabay.com/main/2018/02/16/five-saltwater-fishing-tips-from-a-professional/" %}
+  {% elif flatpage.url == "/beach-reads/insider-tips-to-buying-your-first-kayak/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Maybe you've found yourself itching to commit to a kayak this summer. Florida's surrounding bodies of water are begging you to come feel the sun and spray of the ocean on your skin." meta_img="img.png" meta_canonical="http://www.tampabay.com/sports/outdoors/want-to-buy-a-kayak-here-are-some-tips/2281467" %}
+  {% elif flatpage.url == "/beach-reads/clearwater-beach-named-best-beach-in-the-united-states-7-other-florida-beaches-in-top-25/" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Florida's beaches again dominate TripAdvisor's reader list of top beaches, with Clearwater Beach reclaiming the title of best beach in the United States." meta_img="img.png" %}
+  {% elif flatpage.url == "/beach-reads/josh-welcome-article" %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Explore beaches, get travel tips, plan your vacation and book your trip with us." meta_img="/static/images/welcome-beach-travel-guide.jpg" %}
+  {% else %}
+  {% include "utility/social.html" with meta_domain=request.META.HTTP_HOST meta_path=flatpage.url meta_title=flatpage.title meta_desc="Placeholder - Home" meta_img="img.png" %}
+  {% endif %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- User CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-117741154-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
+  <!-- Modernizr JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" async></script>
+  <!-- Nativo Ad Script -->
+  <script type="text/javascript" src="//s.ntv.io/serve/load.js" async></script>
+  <!-- End Nativo Ad Script -->
+  {% block head %}
+  {% endblock %}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Condensed:400|Oswald:400" rel="stylesheet">
+  <!-- Font Awesome JavaScript -->
+  <script src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous" defer></script>
+  <!-- User JavaScript -->
+  <script src="{% static "js/app.js" %}" defer></script>
+
+  <!-- Begin Adbridg header code -->
+  <script type='text/javascript'>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+          '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+
+      var AdBridg = AdBridg || {};
+      AdBridg.cmd = AdBridg.cmd || [];
+      (function() {
+          var adb = document.createElement("script");
+          adb.async = true;
+          adb.type = "text/javascript";
+          adb.src = '//prod.adspsp.com/adb.9101817f.min.js';
+          var node = document.getElementsByTagName('script')[0];
+          node.parentNode.insertBefore(adb, node);
+
+          adb.onerror = function() {
+            if (AdBridg.exists) { return; }
+            document.createElement('IMG').src = '//adspsp.com/pt/9101817/3/1/?e=0';
+            var dq = [], es;
+            dq.process = function() { while(dq.length) { googletag.display(dq.shift()); }}
+            AdBridg.defineSlot = function(p, s, d) { return googletag.defineSlot(p, s, d).addService(googletag.pubads()); }
+            AdBridg.defineOutOfPageSlot = function(p, d) { return googletag.defineOutOfPageSlot(p, d).addService(googletag.pubads()); }
+            AdBridg.display = function(d) { dq.push(d); if (es) { dq.process(); }}
+            AdBridg.refresh = function(s, o) { googletag.pubads().refresh(s, o); }
+            AdBridg.render = function() { }
+            AdBridg.serve = function() { googletag.enableServices(); es=1; dq.process(); }
+            AdBridg.sizeMapping = function() { return googletag.sizeMapping(); }
+            AdBridg.useSizeMapping = function() { }
+            while (AdBridg.cmd.length) { googletag.cmd.push(AdBridg.cmd.shift()); }
+            AdBridg.cmd = googletag.cmd;
+          }
+      })();
+      AdBridg.cmd.push(function() {
+
+        googletag.pubads().setTargeting("DOMAIN","FBI");
+
+      });
+    </script>
+    <script src="http://www.tbo.com/js/dfp/adbridg.js"></script>
+
+  <!-- End Adbridg header code -->
+
+</head>

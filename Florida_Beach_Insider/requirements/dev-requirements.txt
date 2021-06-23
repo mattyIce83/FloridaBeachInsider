@@ -1,0 +1,7 @@
+######### POLITIFACT Development dependencies ###############
+
+django==1.11.11
+psycopg2-binary
+django-extensions
+django-debug-toolbar
+python-decouple

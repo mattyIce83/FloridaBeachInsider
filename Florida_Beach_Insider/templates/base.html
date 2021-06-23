@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--TEMPLATE NAME base.html -->
+<html>
+{% block head %}
+{% include "utility/head.html" %}
+{% endblock %}
+<body class="fbi-body-{% block body_class %}{% endblock %}">
+  {% block header %}
+  {% include "utility/header.html" %}
+  {% endblock %}
+    <!-- <main> -->
+    {% block content %}
+    {% endblock %}
+    {% block sidebar %}
+    {% endblock %}
+    <!-- </main> -->
+  {% block footer %}
+  {% include "utility/footer.html" %}
+  {% endblock %}
+</body>
+</html>
